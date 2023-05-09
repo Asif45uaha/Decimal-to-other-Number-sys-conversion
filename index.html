@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Number Convertor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+           
+      <span style="font-size: large; color: crimson" 
+        >Decimal to Other Number System Conversion</span
+      >
+      <div class="result"></div>
+      <div class="border"></div>
+      <div class="inputs">
+        <span style="color: crimson" 
+          >Please Input your Decimal Number Below</span
+        >
+        <input
+          type="number"
+          id="number"
+          placeholder="Enter the  Decimal Number"
+        />
+        <div class="buttons">
+          <button onclick="ConvertToBinary()">Binary</button>
+          <button onclick="ConvertToOctal()">Octal</button>
+          <button onclick="ConvertToHex()">Hex</button>
+          <button onclick="reset()" style="background-color: green">
+            Reset
+        </div>
+      </div>
+      </div>
+    </div>
+    <script>
+      const resultEl = document.querySelector(".result");
+      const inputEl = document.getElementById("number");
+
+      const radioEl1 = document.getElementById("decimaltoother")
+       const radioEl2 = document.getElementById("bintoother")
+
+      const ConvertToBinary = () => {
+        let inputVal = Number(inputEl.value);
+        if (inputVal === 0) {
+          return (resultEl.innerHTML = "");
+        }
+        resultEl.innerHTML = `${inputVal.toString(2)}`;
+      };
+      const ConvertToOctal = () => {
+        let inputVal = Number(inputEl.value);
+        if (inputVal === 0) {
+          return (resultEl.innerHTML = "");
+        }
+        resultEl.innerHTML = `${inputVal.toString(8)}`;
+      };
+      const ConvertToHex = () => {
+        let inputVal = Number(inputEl.value);
+        if (inputVal === 0) {
+          return (resultEl.innerHTML = "");
+        }
+        resultEl.innerHTML = `${inputVal.toString(16).toUpperCase()}`;
+      };
+      const reset = () => {
+        resultEl.innerHTML = "";
+        inputEl.value = "";
+      };
+     
+    </script>
+  </body>
+</html>

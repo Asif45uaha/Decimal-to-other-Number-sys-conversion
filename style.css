@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: azure;
+}
+.container {
+  width: 30%;
+  border: 2px solid gainsboro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  padding: 15px 25px;
+  min-height: 20vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.result {
+  margin: 15px 0;
+  border: 0.1px solid green;
+  padding: 25px;
+  width: 100%;
+  border-style: dashed;
+  height: 50%;
+}
+.border {
+  width: 110%;
+  height: 1.7px;
+  background-color: #000;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.inputs span {
+  width: 100%;
+  font-size: 17px;
+  text-align: center;
+}
+.inputs input[type="number"] {
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid green;
+}
+::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+
+  /* justify-content: center; */
+}
+
+.inputs button {
+  padding: 10px;
+  background-color: #f018f0f7;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+  transition: all 0.4s ease-in;
+  width: 50%;
+}
+
+.inputs button:hover {
+  background-color: transparent;
+  color: #000;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 765px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
